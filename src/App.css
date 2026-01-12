@@ -3,6 +3,8 @@
     margin: 0px;
 }
 
-html {
+body {
+    letter-spacing: 0.4px;
     background-color: #333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
