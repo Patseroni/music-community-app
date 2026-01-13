@@ -1,10 +1,17 @@
 .header {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: #555;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
 }
 
-.header h1 {}
 
 .headerHeading {
+    margin-top: 40px;
+    background-color: #654;
+    justify-content: center;
     color: #f0f0f0;
 }

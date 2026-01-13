@@ -8,6 +8,7 @@ function Menu() {
                 <Link to='/profile'>Profile</Link>
                 <Link to='/register'>Register</Link>
                 <Link to='/login'>Log in</Link>
+                <div className={styles.alignmentBlock}></div>
             </nav >
         </>
     )
