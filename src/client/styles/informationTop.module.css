@@ -1,0 +1,14 @@
+.topMainContent {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+}
+
+.welcomeText {
+    width: 600px;
+    padding-left: 40px;
+
+}
