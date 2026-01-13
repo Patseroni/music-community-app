@@ -1,0 +1,36 @@
+.container {
+    margin: auto;
+    display: flex;
+    background-color: #578;
+    height: 100vh;
+}
+
+.topMainContent {
+    background-color: #000;
+    width: 100%;
+    height: 200px;
+}
+
+.welcomeText {
+    width: 600px;
+    padding: 30px;
+    margin-left: 30px;
+}
+
+.left {
+    background-color: #171717;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.center {
+    background-color: #222;
+    flex-grow: 8;
+    height: 100%;
+}
+
+.right {
+    background-color: #171717;
+    flex-grow: 1;
+    height: 100%;
+}
