@@ -7,9 +7,12 @@ function HomePage() {
         <>
             <Header />
             <InformationTop />
-            <MainContent />
+            <MainContent>
+                <h2>HomePage content</h2>
+            </MainContent>
         </>
-    )
+
+    );
 }
 
 export default HomePage

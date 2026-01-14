@@ -1,0 +1,15 @@
+.imgAndDescription {
+    display: flex;
+    background-color: #444;
+}
+
+.songs {
+    background-color: #777;
+}
+
+.profileImgDiv {
+    background-color: #eee;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}

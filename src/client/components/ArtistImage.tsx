@@ -1,10 +1,6 @@
 import styles from '../styles/ArtistImage.module.css'
 import defaultImage from "../../assets/images/defaultImage.webp";
 
-type ArtistImageProps = {
-    src?: string | null;
-};
-
 function ArtistImage() {
     return (
         <>
