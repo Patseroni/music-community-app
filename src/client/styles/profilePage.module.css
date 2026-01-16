@@ -1,15 +1,23 @@
 .imgAndDescription {
-    display: flex;
-    background-color: #444;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    background-color: #a7d;
 }
 
 .songs {
-    background-color: #777;
+    background-color: #a77;
 }
 
 .profileImgDiv {
-    background-color: #eee;
+    background-color: azure;
     width: 200px;
     height: 200px;
+    color: #000;
+    border-radius: 10px;
+}
+
+
+.artistDescription,
+.artistDescription textarea {
     border-radius: 10px;
 }

@@ -1,17 +1,31 @@
 .header {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    background-color: #555;
+    background-color: #333;
     justify-content: center;
-    width: 100%;
-    height: 150px;
+    height: 180px;
+    margin-bottom: 2px;
+    box-shadow: 0px 5px 8px -5px #111;
 }
 
+.headingDiv {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+}
+
+.headingDiv img {
+    margin-top: 1.6rem;
+    margin-left: 3rem;
+}
 
 .headerHeading {
-    margin-top: 40px;
-    background-color: #654;
+    margin-top: 3.5rem;
     justify-content: center;
+    font-size: 2.5rem;
     color: #f0f0f0;
+    grid-area: 1 / 2 / 1 / 10;
+}
+
+.logo {
+    width: 100px;
 }

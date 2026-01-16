@@ -1,24 +1,23 @@
 .menu {
     display: flex;
-    justify-content: end;
-    margin-top: 25px;
-    font-size: 22px;
+    justify-content: right;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #f0f0f0;
 }
 
 a {
     text-decoration: none;
-    color: #f0f0f0;
+    margin-right: 5%;
 }
 
-a:visited {
+nav a:nth-of-type(3) {
+    margin-right: 8%;
+}
+
+
+a:visited,
+a:active {
     text-decoration: none;
     color: #f0f0f0;
-}
-
-nav a {
-    margin: 0px 3% 0px 0px;
-}
-
-.alignmentBlock {
-    width: 140px;
 }

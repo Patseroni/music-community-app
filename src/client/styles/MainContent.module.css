@@ -1,26 +1,6 @@
 .container {
     margin: auto;
     display: flex;
-    background-color: #578;
-
-}
-
-.left {
-    background-color: #171717;
-    width: 10%;
-
-}
-
-.center {
     justify-content: center;
-    background-color: #aaa;
-    width: 80%;
-    flex-wrap: wrap;
-    padding-left: 40px;
-}
-
-.right {
-    background-color: #171717;
-    width: 10%;
 
 }

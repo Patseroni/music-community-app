@@ -1,0 +1,15 @@
+.songCard {
+    margin: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    background-color: #111;
+    outline: 2px solid #666;
+
+}
+
+.songCard p {
+    background-color: #444;
+    border-radius: 0px 0px 5px 5px;
+    width: 180px;
+
+}
