@@ -4,10 +4,12 @@
 }
 
 html {
-    background-color: #181818;
+    background-color: #080808;
 }
 
 body {
+    max-width: 1600px;
+    margin: auto;
     background-color: #000;
     color: #f0f0f0;
     background-color: #222;

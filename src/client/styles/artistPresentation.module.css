@@ -1,16 +1,54 @@
-.imgAndDescriptionDiv {
-    display: grid;
-    grid-template-columns: repeat(10, 10%);
+.artistContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.profileImgDiv {
+.imgAndBrowseDiv {
     display: flex;
     flex-direction: column;
+    margin-right: 2rem;
+
 }
 
-.profileImgDiv {
-    grid-column: 4 / span 2;
+.imgAndBrowseDiv img {
+    background-color: #222;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    outline: 1px solid #666;
 }
 
-.descriptionDiv {}
+.imgAndBrowseDiv input {
+    margin-top: 10px;
+}
+
+.descriptionAndButtonDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 46px;
+}
+
+.descriptionDiv {
+    outline: 1px solid #666;
+    border-radius: 5px;
+    background-color: #222;
+    width: 280px;
+    height: 150px;
+}
+
+.descriptionAndButtonDiv p {
+    font-style: italic;
+    padding-left: 10px;
+    padding-top: 5px;
+
+}
+
+.descriptionAndButtonDiv button {
+    width: 120px;
+    height: 25px;
+    margin-top: 10px;
+}

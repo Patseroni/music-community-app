@@ -1,7 +1,7 @@
 .userName {
-    color: rgb(100, 219, 106);
-    outline: 1px solid #555;
-    padding: 2px 10px 2px 10px;
-    background-color: #333;
-    border-radius: 5px;
+    color: #eee;
+    outline: 1px solid #444;
+    padding: 2px 8px;
+    background-color: #1b2327;
+    border-radius: 3px;
 }

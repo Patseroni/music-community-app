@@ -9,7 +9,7 @@ function RegisterPage() {
             <MainContent>
 
                 <div>
-                    <h2>registerPage</h2>
+                    <h2>RegisterPage</h2>
                 </div>
 
             </MainContent>

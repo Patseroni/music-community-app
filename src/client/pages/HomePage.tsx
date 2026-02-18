@@ -23,6 +23,7 @@ function HomePage() {
                         <li><SongCard /></li>
                         <li><SongCard /></li>
                         <li><SongCard /></li>
+                        <li><SongCard /></li>
                     </ul>
                 </div>
 

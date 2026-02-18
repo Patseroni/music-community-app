@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import MainContent from '../components/MainContent'
 import styles from '../styles/profilePage.module.css'
 import ArtistPresentation from '../components/ArtistPresentation'
+import ProfileSongList from '../components/ProfileSongList'
 
 function ProfilePage() {
     return (
@@ -11,7 +12,7 @@ function ProfilePage() {
             <MainContent>
 
                 <div className={styles.songs}>
-                    <h2>ProfilePage songs</h2>
+                    <ProfileSongList />
                 </div>
 
             </MainContent>

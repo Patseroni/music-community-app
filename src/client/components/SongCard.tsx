@@ -6,8 +6,8 @@ function SongCard() {
         <>
             <div className={styles.songCard}>
                 <ArtistImage />
-                <p>Artist<br />
-                    Song</p>
+                <p className={styles.artistTitle}>Artist</p>
+                <p className={styles.songTitle}>Song</p>
             </div>
         </>
     )

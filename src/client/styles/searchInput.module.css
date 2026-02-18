@@ -7,40 +7,40 @@
 }
 
 .innerSearchDiv {
-    grid-column: 16 / span 7;
+    grid-column: 15 / span 6;
     display: flex;
     margin-top: 10px;
     align-items: center;
+
 }
 
 .innerSearchDiv input,
 .innerSearchDiv button {
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
     border: none;
 }
 
 .innerSearchDiv input {
-    background-color: #bbb;
+    background-color: #ccc;
     width: 100%;
+    min-width: 160px;
     padding-left: 10px;
 }
 
 .innerSearchDiv button {
-    width: 80px;
+    width: 100px;
+    min-width: 80px;
     margin-left: 5px;
     font-size: 0.9rem;
     font-weight: 400;
-    background-image: linear-gradient(to bottom, rgb(226, 164, 106), rgb(223, 107, 107));
+    background-image: linear-gradient(to bottom, #bbb, #999);
 }
 
 .innerSearchDiv button:active {
-    background-image: linear-gradient(to top, rgb(196, 141, 91), rgb(187, 86, 86));
+    background-image: linear-gradient(to bottom, );
 }
 
-.innerSearchDiv button:active {
-    color: #531;
-}
 
 .discover {
     background-color: #222;
@@ -61,4 +61,11 @@
 
 .discover p {
     margin-left: 2.1rem;
+}
+
+@media(max-width: 1280px) {
+    .searchContainer {
+        display: flex;
+        justify-content: center;
+    }
 }

@@ -4,6 +4,7 @@
     background-color: #1a1a1a;
     justify-content: center;
     height: 180px;
+    background-image: url("src/assets/images/retroheader.webp");
     /* box-shadow: 0px 5px 8px -6px #0e0e0e; */
 }
 
@@ -14,7 +15,6 @@
 
 .headerHeading {
     margin-top: 3rem;
-    margin-left: 10px;
     font-size: 2.5rem;
     color: #f0f0f0;
     grid-area: 1 / 2 / 1 / 10;
@@ -23,6 +23,6 @@
 .logo {
     width: 100px;
     margin-top: 1.6rem;
-    margin-left: 5rem;
+    margin-left: 3rem;
     grid-area: 1 / 2 / 1 / 10;
 }

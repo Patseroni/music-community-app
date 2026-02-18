@@ -2,12 +2,11 @@ import { useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import styles from "../styles/googleLoginButton.module.css"
 
-const CLIENT_ID = "847757529604-l2mt32stsfbdoctoutrvh8v9pltgdiuv.apps.googleusercontent.com";
+const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 function GoogleLoginButton() {
 
-    const { setUser } = useAuth();
-    const { user } = useAuth();
+    const { user, setUser } = useAuth();
 
     useEffect(() => {
         window.google.accounts.id.initialize({
