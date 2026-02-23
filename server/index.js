@@ -8,6 +8,9 @@ import { dirname } from "path";
 import authRoutes from "./routes/auth.routes.js"
 import songRoutes from "./routes/song.routes.js";
 
+import connectDB from "../config/db.js"
+connectDB();
+
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);

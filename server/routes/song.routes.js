@@ -11,7 +11,7 @@ router.post("/upload", upload.single("song"), (req, res) => {
     }
 
     res.json({
-        filename: req.file.filename,
+        filename: req.file.filename
     });
 });
 
