@@ -1,17 +1,19 @@
+import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
-import authRoutes from "./routes/auth.routes.js"
+import authRoutes from "./routes/auth.routes.js";
 import songRoutes from "./routes/song.routes.js";
 
-import connectDB from "../config/db.js"
-connectDB();
+dotenv.config({ path: "./.env" });
+console.log("MONGO_URI =", process.env.MONGO_URI);
+console.log("GOOGLE_CLIENT_ID =", process.env.GOOGLE_CLIENT_ID);
 
-dotenv.config();
+import connectDB from "../src/config/db.js";
+connectDB();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
