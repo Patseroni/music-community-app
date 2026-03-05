@@ -1,0 +1,22 @@
+.registerDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.registerName,
+.registerEmail,
+.registerPassword {
+    margin-bottom: 30px;
+}
