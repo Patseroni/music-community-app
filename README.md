@@ -16,7 +16,7 @@ Open two terminal windows.
 
 The app should run on port 5173.
 
-To access the profile page, type /upload after 5173 (you can´t access the profile page by navigation at the moment).    
+To access the profile page, type /upload after 5173 (you can´t access the profile page by navigation or via google login at the moment).      
 Hopefully, you can now upload an audiofile(.mp3, .wav or .flac) and a profile-image.  
 The audiofile should start playing by clicking on it.
 
