@@ -20,3 +20,20 @@ h3 {
 .registerPassword {
     margin-bottom: 30px;
 }
+
+input {
+    width: 250px;
+    height: 20px;
+    padding: 5px;
+}
+
+.registerButton {
+    text-align: center;
+}
+
+.registerButton button {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 40px;
+
+}

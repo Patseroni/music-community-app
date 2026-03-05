@@ -25,6 +25,9 @@ function RegisterPage() {
                         <h3>Password:</h3>
                         <input></input>
                     </div>
+                    <div className={styles.registerButton}>
+                        <button>Submit</button>
+                    </div>
 
                 </div>
 
