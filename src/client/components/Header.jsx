@@ -1,4 +1,4 @@
-import Menu from './Menu.tsx'
+import Menu from './Menu.jsx'
 import styles from '../styles/header.module.css'
 import logo from '../../assets/images/R_logo2.webp'
 import { NavLink } from 'react-router-dom'

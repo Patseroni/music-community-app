@@ -1,14 +1,7 @@
-import type { ReactNode } from 'react';
 import styles from '../styles/MainContent.module.css'
 
 
-type MainContentProps = {
-    left?: ReactNode;
-    right?: ReactNode;
-    children?: ReactNode;
-};
-
-function MainContent({ left, right, children }: MainContentProps) {
+function MainContent({ left, right, children }) {
     return (
         <div className={styles.container}>
             <div className={styles.left}>{left}</div>

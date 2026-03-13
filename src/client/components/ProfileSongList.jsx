@@ -1,17 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/profileSongList.module.css";
-import type { Song } from "../../types/song";
 
 function ProfileSongList() {
-    const [songs, setSongs] = useState<Song[]>([]);
-    const fileInputRef = useRef<HTMLInputElement>(null);
-    const [currentSong, setCurrentSong] = useState<string | null>(null);
+    const [songs, setSongs] = useState([]);
+    const [currentSong, setCurrentSong] = useState(null);
 
     // Get existing songs
     useEffect(() => {
         async function fetchSongs() {
             try {
-                const res = await fetch("http://localhost:5000/songs");
+                const res = await fetch("http://localhost:5000/api/songs");
                 const data = await res.json();
                 setSongs(data.songs);
             } catch (error) {
@@ -22,29 +20,25 @@ function ProfileSongList() {
         fetchSongs();
     }, []);
 
-    function handleButtonClick() {
-        fileInputRef.current?.click();
-    }
-
-    async function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    async function handleFileChange(e) {
         const file = e.target.files?.[0];
         if (!file) return;
 
         const formData = new FormData();
         formData.append("song", file);
 
-        const res = await fetch("http://localhost:5000/songs/upload", {
+        const res = await fetch("http://localhost:5000/api/songs/upload", {
             method: "POST",
             body: formData,
         });
 
         const data = await res.json();
 
-        setSongs(prev => [
-            ...prev,
+        setSongs(prevSongs => [
+            ...prevSongs,
             {
                 filename: data.filename,
-                originalname: data.originalname,
+                originalname: data.originalname
             }
         ]);
     }
@@ -53,16 +47,10 @@ function ProfileSongList() {
         <>
             <h2 className={styles.songListHeader}>Songs</h2>
 
-            {/* Upload button */}
-            <button onClick={handleButtonClick}>Upload song</button>
-
-            {/* Hidden file input */}
             <input
                 type="file"
                 accept=".mp3,.wav,.flac"
-                ref={fileInputRef}
                 onChange={handleFileChange}
-                hidden
             />
 
             <ul className={styles.songList}>

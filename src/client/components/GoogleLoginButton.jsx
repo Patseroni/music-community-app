@@ -15,12 +15,12 @@ function GoogleLoginButton() {
         });
 
         window.google.accounts.id.renderButton(
-            document.getElementById("google-login")!,
+            document.getElementById("google-login"),
             { theme: "outline", size: "medium" }
         );
     }, []);
 
-    async function handleCredentialResponse(response: any) {
+    async function handleCredentialResponse(response) {
         try {
             const token = response.credential;
 

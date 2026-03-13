@@ -3,9 +3,9 @@ import styles from '../styles/artistPresentation.module.css'
 
 function ArtistPresentation() {
 
-    const [preview, setPreview] = useState<string | null>(null);
+    const [preview, setPreview] = useState(null);
 
-    async function uploadImage(file: File) {
+    async function uploadImage(file) {
         const formData = new FormData();
         formData.append('image', file);
 
@@ -18,7 +18,7 @@ function ArtistPresentation() {
         console.log('Uploaded:', data);
     }
 
-    function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleFileChange(e) {
         const file = e.target.files?.[0];
         if (!file) return;
 
