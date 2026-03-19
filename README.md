@@ -7,8 +7,8 @@ MongoDB
 Express.js  
 React  
 Node.js  
-Multer
-Cloudflare R2
+Multer  
+Cloudflare R2  
 
 **Status**  
 In progress...
