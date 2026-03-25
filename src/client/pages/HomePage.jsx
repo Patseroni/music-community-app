@@ -16,7 +16,6 @@ function HomePage() {
 
                     </ul>
                 </div>
-
             </MainContent>
         </>
 

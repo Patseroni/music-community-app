@@ -1,11 +1,6 @@
 import mongoose from "mongoose";
 
 const songSchema = new mongoose.Schema({
-    artist: {
-        type: String,
-        required: true,
-        trim: true
-    },
     filename: {
         type: String,
         required: true,
@@ -15,10 +10,10 @@ const songSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    uploadedBy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: true
+    url: {
+        type: String,
+        required: true,
+        trim: true
     }
 
 }, { timestamps: true });

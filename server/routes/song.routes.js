@@ -1,31 +1,65 @@
 import express from "express";
-import fs from "fs";
 import upload from "../middleware/upload.js";
-
+import Song from "../models/Song.model.js";
+import { PutObjectCommand } from "@aws-sdk/client-s3";
+import r2 from "../config/r2.js";
+import crypto from "crypto";
 
 const router = express.Router();
+const MAX_FILES_PER_USER = 5;
 
 // Upload song
-router.post("/upload", upload.single("song"), (req, res) => {
-    console.log(req.file);
-    if (!req.file) {
-        return res.status(400).json({ error: "No file uploaded" });
+router.post("/upload", upload.single("song"), async (req, res) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({ error: "No file uploaded or invalid file type" });
+        }
+
+        const ext = req.file.originalname.split(".").pop();
+        const filename = crypto.randomUUID() + "." + ext;
+
+        await r2.send(new PutObjectCommand({
+            Bucket: process.env.R2_BUCKET_NAME,
+            Key: filename,
+            Body: req.file.buffer,
+            ContentType: req.file.mimetype,
+        }));
+
+        const fileUrl = `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${process.env.R2_BUCKET_NAME}/${filename}`;
+
+        const song = new Song({
+            filename: filename,
+            originalname: req.file.originalname,
+            url: fileUrl
+        });
+
+        await song.save();
+
+        res.json(song);
+    }
+    catch (error) {
+        console.error("Upload error:", error);
+        res.status(500).json({
+            error: "Something went wrong when uploading song"
+        })
     }
 
-    res.json({
-        filename: req.file.filename,
-        originalname: req.file.originalname
-    });
 });
 
 // Get uploaded songs
-router.get("/", (req, res) => {
-    if (!fs.existsSync("uploads")) {
-        return res.json({ songs: [] });
+router.get("/", async (req, res) => {
+    try {
+        const songs = await Song.find();
+        res.json(songs);
+    }
+    catch (error) {
+        console.error("Fetch songs error:", error);
+        res.status(500).json({
+            error: "Failed to fetch songs"
+        });
     }
 
-    const files = fs.readdirSync("uploads");
-    res.json({ songs: files });
+
 });
 
 

@@ -5,13 +5,13 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
-import authRoutes from "./routes/auth.routes.js";
 import songRoutes from "./routes/song.routes.js";
 
-dotenv.config({ path: "./.env" });
-console.log("GOOGLE_CLIENT_ID = ", process.env.GOOGLE_CLIENT_ID);
+const PORT = process.env.PORT || 5000;
 
-import connectDB from "../src/config/db.js";
+dotenv.config({ path: "./.env" })
+
+import connectDB from "./config/db.js";
 connectDB();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -23,9 +23,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-app.use("/auth", authRoutes);
 app.use("/songs", songRoutes);
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
+    console.log("PORT: " + PORT);
     console.log("Server running on http://localhost:5000");
 });

@@ -11,7 +11,7 @@ function ProfileSongList() {
             try {
                 const res = await fetch("http://localhost:5000/api/songs");
                 const data = await res.json();
-                setSongs(data.songs);
+                setSongs(data);
             } catch (error) {
                 console.error("Failed to fetch songs:", error);
             }
@@ -66,7 +66,7 @@ function ProfileSongList() {
                 <audio className={styles.audioPlayer}
                     controls
                     autoPlay
-                    src={`http://localhost:5000/uploads/${currentSong}`}
+                    src={"https://7b5253656f1871de615e10b016128e6f.r2.cloudflarestorage.com/synthwave-songs/4c1ae10d-9189-47ea-8060-7c7fc52b1f5a.mp3"}
 
                 />
             )}
