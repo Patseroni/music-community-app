@@ -14,8 +14,4 @@ const r2 = new S3Client({
 
 });
 
-console.log("KEY:", process.env.R2_ACCESS_KEY_ID);
-console.log("SECRET:", process.env.R2_SECRET_ACCESS_KEY);
-console.log("ACCOUNT:", process.env.R2_ACCOUNT_ID);
-
 export default r2;
