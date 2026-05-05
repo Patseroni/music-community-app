@@ -1,14 +1,5 @@
 .menu {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin-top: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    height: 40px;
-    background-color: #303030;
-
-
+    margin-top: 2px;
 }
 
 a {
@@ -16,11 +7,6 @@ a {
     margin-right: 50px;
 
 }
-
-nav a:nth-of-type(3) {
-    margin-right: 4%;
-}
-
 
 a,
 a:visited,

@@ -9,7 +9,7 @@ function ProfileSongList() {
     useEffect(() => {
         async function fetchSongs() {
             try {
-                const res = await fetch("http://localhost:5000/api/songs");
+                const res = await fetch("http://localhost:5000/songs");
                 const data = await res.json();
                 setSongs(data);
             } catch (error) {
@@ -27,7 +27,7 @@ function ProfileSongList() {
         const formData = new FormData();
         formData.append("song", file);
 
-        const res = await fetch("http://localhost:5000/api/songs/upload", {
+        const res = await fetch("http://localhost:5000/songs/upload", {
             method: "POST",
             body: formData,
         });
@@ -38,9 +38,11 @@ function ProfileSongList() {
             ...prevSongs,
             {
                 filename: data.filename,
-                originalname: data.originalname
+                originalname: data.originalname,
+                url: data.url
             }
         ]);
+
     }
 
     return (
@@ -57,7 +59,7 @@ function ProfileSongList() {
                 {songs.map((song) => (
                     <li
                         key={song.filename}
-                        onClick={() => setCurrentSong(song.filename)}>{song.originalname}
+                        onClick={() => setCurrentSong(song.url)}>{song.originalname}
                     </li>
                 ))}
             </ul>
@@ -66,7 +68,7 @@ function ProfileSongList() {
                 <audio className={styles.audioPlayer}
                     controls
                     autoPlay
-                    src={"https://7b5253656f1871de615e10b016128e6f.r2.cloudflarestorage.com/synthwave-songs/4c1ae10d-9189-47ea-8060-7c7fc52b1f5a.mp3"}
+                    src={currentSong}
 
                 />
             )}

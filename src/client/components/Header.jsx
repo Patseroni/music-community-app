@@ -11,8 +11,9 @@ function Header() {
                     <NavLink to="/"><img className={styles.logo} src={logo} alt="Logotype" /></NavLink>
                     <h1 className={styles.headerHeading}>Retrowave Music Community</h1>
                 </div>
-                <Menu />
             </div>
+
+            <Menu />
 
         </>
     )

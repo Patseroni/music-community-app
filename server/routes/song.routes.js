@@ -25,7 +25,8 @@ router.post("/upload", upload.single("song"), async (req, res) => {
             ContentType: req.file.mimetype,
         }));
 
-        const fileUrl = `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${process.env.R2_BUCKET_NAME}/${filename}`;
+        const bucket = process.env.R2_BUCKET_NAME;
+        const fileUrl = `https://${bucket}.r2.dev/${filename}`;
 
         const song = new Song({
             filename: filename,
